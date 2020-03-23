@@ -4,6 +4,17 @@
 
 //  function sum(n) {
 //  // TODO: your code here
+​
+function sum (n) {
+​
+if (n === 0) {
+​
+	return 0;
+}
+​
+return n + sum(n - 1);
+​
+}
 //  }
 //  sum(3); // => 3 + 2 + 1 + 0 => 6
 //  sum(4); // => 4 + 3 + 2 + 1 + 0 => 10
@@ -14,7 +25,17 @@
 
 //  function factorial(n) {
 //  // TODO: your code here
+function factorial(n) {
+	
+	if (n === 0) {
+		
+		return 1;
+	}
+	
+	return n * factorial(n - 1);
+}
 //  }
+
 //  factorial(3); // => 3 * 2 * 1 => 6
 //  factorial(4); // => 4 * 3 * 2 * 1 => 24
 //  factorial(5); // => 5 * 4 * 3 * 2 * 1 => 120
@@ -24,6 +45,12 @@
 
 //  function repeatString(str, count) {
 //  // TODO: your code here
+function repeatString(str, count) {
+  if (count === 0 ){
+   return ' ';
+}
+   return str + repeatString(str, count - 1);
+}
 //  }
 //  repeatString('dog', 0); // => ''
 //  repeatString('dog', 1); // => 'dog'
@@ -46,6 +73,14 @@
 //  fib(1) is 1
 //  fib(n) is fib(n - 1) + fib(n - 2)
 //  Write a function called fib that accepts a number n as a parameter and computes the nth fibonacci number using the above rules.
+function fib(n) {
+   if (n === 0 || n === 1) {
+   	return 1;
+   }
+ return fib(n - 1) + fib(n - 2); 
+​
+}
+
 
 // 5.Write function that multiply the number by 10 n time
 
@@ -53,6 +88,18 @@
 //  multiplyBy10(4,3) => 4000
 //  multiplyBy10(5,2) => 500
 // ------------------------- More Practice -------------------------
+function multiplyByTen(number, n) {
+
+    if (n === 0){
+​
+    	return number ;
+    } 
+​
+return (10 * multiplyByTen(number, n-1));
+​
+​
+}
+​
 
 // 1.Modify your sum function from the Basic Requirements section to accept two parameters, start and end: sum should now compute the sum of the numbers from start to end, e.g.
 
